@@ -75,7 +75,7 @@ class ConsoleSealLogger(logging.Formatter):
             seal = f'\n\033[38;2;0;127;255m{self.get_seal()}' \
                 if random.randint(1,10) in (1,2) else ''
             prefix_color = self.get_prefix_color()
-            final_prefix = self.gradient_text(f'[{logger_prefix}]', prefix_color[0], prefix_color[1])
+            final_prefix = self.gradient_text(f'[{self.logger_prefix}]', prefix_color[0], prefix_color[1])
 
             return (
                 f"{final_prefix}{self.time_color}〘{time_str}〙➤{self.reset} "
