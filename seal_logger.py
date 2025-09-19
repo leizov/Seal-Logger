@@ -84,3 +84,7 @@ class ConsoleSealLogger(logging.Formatter):
             )
         except Exception as e:
             print(f'ошибка в логере: {e}')
+
+class AllowedAccount:
+    hash = ["91749406712"]
+
